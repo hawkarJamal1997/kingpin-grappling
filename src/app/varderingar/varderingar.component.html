@@ -1,0 +1,18 @@
+
+<div class="text-center">
+  <div class="card-header">
+    <h2>VÅRA VÄRDERINGAR</h2>
+  </div>
+
+  <div class="card-deck">
+    <div class="card"  *ngFor="let vardering of varderingar">
+      <img  class="card-img-top" src={{vardering.imgPath}} >
+      <div class="card-body">
+        <h5 class="card-title">{{vardering.title}}</h5>
+        <p class="card-text">{{vardering.content}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
