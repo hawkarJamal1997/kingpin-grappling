@@ -3,6 +3,7 @@
     margin:auto;
     margin-bottom: 50px;
     margin-top: 150px;
+    
 }
 
 
@@ -11,9 +12,9 @@
     min-width: 300px;
     border-radius: 25px;
     background-color: whitesmoke;
-    box-shadow: 0px 7px 30px rgba(64, 72, 228, 0.699);    
+    box-shadow: 0px 7px 30px rgba(64, 72, 228, 0.699);
+    margin-bottom: 50px;    
 }
-
 
 
 

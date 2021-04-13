@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VarderingarComponent } from './varderingar/varderingar.component';
 import { InriktningarComponent } from './inriktningar/inriktningar.component';
+import { OmOssComponent } from './om-oss/om-oss.component';
+import { KingpinKidsComponent } from './kingpin-kids/kingpin-kids.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VarderingarComponent,
-    InriktningarComponent
+    InriktningarComponent,
+    OmOssComponent,
+    KingpinKidsComponent
   ],
   imports: [
     BrowserModule,
