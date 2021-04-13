@@ -1,0 +1,21 @@
+
+<div class="text-center">
+    <div class="card-header">
+      <h2>VÅRA INRIKTNINGAR</h2>
+    </div>
+    <div class="card-shelf">
+        <div class="card mb-3" *ngFor="let inriktning of inriktningar">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src={{inriktning.imgPath}}>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{inriktning.title}}</h5>
+                        <p class="card-text">{{inriktning.content}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
