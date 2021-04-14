@@ -12,6 +12,10 @@ body {
 }
 
 h1{
+  color: whitesmoke;
+}
+
+h2{
   color: rgba(244,88,110,1);
 }
 .container{

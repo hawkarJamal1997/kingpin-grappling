@@ -1,63 +1,17 @@
 <div class="container">
   <h1>Vanliga frågor</h1>
   <div class="jumbotron">
-    <div id="accordion">
-      <div class="card">
-        <div class="card-header" id="headingOne">
-          <h5 class="mb-0">
-            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Måste jag vara vältränad för att börja träna BJJ? (Jag är ur form, måste bara träna upp mig lite först...!)
-            </button>
-          </h5>
-        </div>
-        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-          <div class="card-body">
-            Kort svar: Nej, du behöver inte vara vältränad för att börja träna. Du kommer dock bli det om du börjar och kör regelbundet. BJJ tränar kondition, smidighet och styrka på ett väldigt kul sätt.
-          </div>
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item" *ngFor="let question of questions; index as i">
+        <h2 class="accordion-header" id="flush-heading{{i}}">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#flush-collapse'+i" aria-expanded="false" [attr.aria-controls]="'flush-collapse'+i">
+            <strong>{{question.question}}</strong>
+          </button>
+        </h2>
+        <div [attr.id]="'flush-collapse'+i" class="accordion-collapse collapse" [attr.aria-labelledby]="'flush-heading'+i" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            {{question.answer}}
         </div>
       </div>
-      <div class="card">
-        <div class="card-header" id="headingTwo">
-          <h5 class="mb-0">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Är jag för gammal för att börja träna?
-            </button>
-          </h5>
-        </div>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-          <div class="card-body">
-            Nej, oavsett vilken ålder du än befinner dig i är svaret detsamma. Finns en uppsjö av exempel på folk som tränar BJJ i 60-70 årsåldern runt om i världen.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" id="headingThree">
-          <h5 class="mb-0">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
-              Jag är tjej, är BJJ något för mig?
-            </button>
-          </h5>
-        </div>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-          <div class="card-body">
-            BJJ är absolut för tjejer, faktum är att tjejer oftare utvecklas snabbare än killar då de inte förlitar sig på styrka utan lätt kan ta till sig tekniker som visas. BJJ som kampsort utvecklades med syfte att en fysiskt mindre person ska klara av en större och starkare motståndare via teknik och har visat sig framgångsrikt under decennier. Sett ur ett självförsvarsperspektiv är det få kampsorter som mäter sig med BJJ när det gäller effektivitet.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" id="headingFour">
-          <h5 class="mb-0">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-              Vad behöver jag för utrustning/saker till träningen?
-            </button>
-          </h5>
-        </div>
-        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-          <div class="card-body">
-            Till dina första pass behöver du t-shirt och shorts/långbyxor, vattenflaska och nyfiken inställning. Väljer du att fortsätta kommer du behöva köpa en GI (träningsdräkt) samt rashguard. Många har även tandskydd. Det finns flera på klubben som kan hjälpa till med GI-inköp så att det blir lätt och rätt från början. Vi rekommenderar även en Dauer-binda om olyckan är framme för att linda stukningar etc., går att köpa på Apotektet för ca 70:-
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </div>

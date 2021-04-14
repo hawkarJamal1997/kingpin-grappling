@@ -1,3 +1,4 @@
+import { Contact } from './mock-contact';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ContactComponent implements OnInit {
 
   constructor() { }
-
+  contact = Contact
   ngOnInit(): void {
   }
 
