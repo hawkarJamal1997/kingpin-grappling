@@ -1,0 +1,25 @@
+.footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  color: aliceblue;
+  background-color: #424242;
+  overflow: hidden;
+  text-align: center;
+}
+
+h3{
+  color: rgba(244,88,110,1);
+}
+
+#infowindow{
+  color: black !important;
+}
+
+agm-map {
+  float: right;
+  height: 350px;
+  width: 100%;
+}
