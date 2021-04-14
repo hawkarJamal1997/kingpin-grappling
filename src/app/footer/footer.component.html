@@ -1,0 +1,51 @@
+<div class="footer">
+  <div class="row">
+    <div class="col-sm-3">
+      <h2>Översikt</h2>
+      <a href="/specialization">
+        <h3>Inriktningar</h3>
+      </a>
+      <a href="/values">
+        <h3>Värderingar</h3>
+      </a>
+      <a href="/schedule">
+        <h3>Schema</h3>
+      </a>
+      <a href="/membership">
+        <h3>Medlemskap</h3>
+      </a>
+      <a href="/kingpin-kids">
+        <h3>Kingpin kids</h3>
+      </a>
+      <a href="/faq">
+        <h3>Vanliga frågor</h3>
+      </a>
+    </div>
+    <div class="col-sm-3">
+      <h3>Hitta hit</h3>
+      <p>Grännavägen 24, 561 34 Huskvarna <br> Ingång sker via Engelbrektsgatan. <br>
+        <b><u>Buss</u></b> <br> 101 Hpl Kroatorpet. <br>
+        <b><u>Promenad från södra esplanaden Huskvarna</u></b> <br> ca 10-12 min.</p>
+        <a href="/contact">
+          <h3>Kontakt</h3>
+        </a>
+        <p><i class="bi bi-telephone-fill" style="font-size: 1.3rem;"></i>Tel: +46703401360 <br>
+          <i class="bi bi-envelope-fill" style="font-size: 1.3rem;"></i>E-post: info@kingpingrappling.se</p>
+        <a href="https://www.facebook.com/kingpingrappling.se/">
+          <i class="bi bi-facebook" style="font-size: 2rem; color: rgba(244,88,110,1)"></i>
+        </a>
+        <a href="https://www.instagram.com/kingpingrappling/">
+          <i class="bi bi-instagram" style="margin-left: 10px; font-size: 2rem; color:rgba(244,88,110,1)"></i>
+        </a>
+      </div>
+    <div class="col-sm-6">
+      <agm-map [zoom]="12" [latitude]="lat" [longitude]="lng">
+        <agm-marker [latitude]="lat" [longitude]="lng">
+          <agm-info-window [isOpen]="true">
+            <b id="infowindow">Kingpin Grappling</b>
+          </agm-info-window>
+        </agm-marker>
+      </agm-map>
+    </div>
+  </div>
+</div>
