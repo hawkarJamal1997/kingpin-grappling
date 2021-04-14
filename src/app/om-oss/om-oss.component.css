@@ -3,11 +3,17 @@
     
     max-width: 75%;
     margin: auto;
-
     margin-top:120px;
-    margin-bottom: 50px;
-    border: 3px solid blue;
+    margin-bottom: 75px;
     border-radius:10px;
-    box-shadow: 0px 7px 30px rgba(64, 72, 228, 0.699);    
+    box-shadow: 0px 7px 30px rgba(64, 72, 228, 0.308);    
 
+}
+
+
+.accordion {
+    max-width: 75%;
+    margin: auto;
+    margin-bottom: 50px;
+    box-shadow: 0px 7px 30px rgba(64, 72, 228, 0.308);  
 }

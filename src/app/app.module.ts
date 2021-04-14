@@ -18,7 +18,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     VarderingarComponent,
     InriktningarComponent,
     OmOssComponent,
-    KingpinKidsComponent
+    KingpinKidsComponent,
     NavbarComponent
   ],
   imports: [
