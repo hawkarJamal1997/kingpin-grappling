@@ -5,8 +5,8 @@
     margin: auto;
     margin-top:120px;
     margin-bottom: 75px;
-    border-radius:10px;
-    box-shadow: 0px 7px 30px rgba(64, 72, 228, 0.308);    
+    border-radius:25px;
+    border-color: white;
 
 }
 
@@ -16,4 +16,17 @@
     margin: auto;
     margin-bottom: 50px;
     box-shadow: 0px 7px 30px rgba(64, 72, 228, 0.308);  
+    border-color: white;
+
+}
+
+.accordion-item{
+    border-color: white;
+    border-radius:25px;
+
+}
+
+h1{
+    font-family: Comic Sans MS;
+    color: pink;
 }
