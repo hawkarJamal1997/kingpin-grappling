@@ -1,0 +1,19 @@
+
+<div class="text-center">
+  <h1 class="display-1"><strong>VÅRA Inriktningar</strong></h1>
+    <div class="card-shelf">
+        <div class="card mb-3" *ngFor="let type of grapplingTypes">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src={{type.imgPath}}>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{type.title}}</h5>
+                        <p class="card-text">{{type.content}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

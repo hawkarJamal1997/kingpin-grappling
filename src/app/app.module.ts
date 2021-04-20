@@ -1,14 +1,13 @@
+import { GrapplingTypeComponent } from './grapplingtype/grapplingtype.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AgmCoreModule } from '@agm/core'
-
+import { AgmCoreModule } from '@agm/core';
 
 
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { VarderingarComponent } from './varderingar/varderingar.component';
-import { InriktningarComponent } from './inriktningar/inriktningar.component';
 import { OmOssComponent } from './om-oss/om-oss.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -19,19 +18,24 @@ import { FaqComponent } from './faq/faq.component';
 import { KingpinKidsSidaComponent } from './kingpin-kids-sida/kingpin-kids-sida.component';
 import { LokalenComponent } from './lokalen/lokalen.component';
 
+import { ScheduleComponent } from './schedule/schedule.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     VarderingarComponent,
-    InriktningarComponent,
+    GrapplingTypeComponent,
     OmOssComponent,
+    KingpinKidsComponent,
     NavbarComponent,
     HomeComponent,
     ContactComponent,
     FooterComponent,
     FaqComponent,
     KingpinKidsSidaComponent,
-    LokalenComponent
+    LokalenComponent,
+    ScheduleComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,51 @@
+<div class="container text-center">
+  <h2 class="margin">Träning</h2><br>
+  <div class="row">
+    <div class="col-sm">
+      <div class="jumbotron">
+        <nav ngbNav #nav="ngbNav" class="nav-tabs">
+          <ng-container ngbNavItem *ngFor="let exercise of exercises | slice:0:2; index as i" >
+            <a ngbNavLink>{{exercise.title}}</a>
+            <ng-template ngbNavContent>
+              <img src="{{exercise.imgPath}}" class="card-img-top" alt="image of exercise">
+              <div>
+                <h2>{{exercise.title}}</h2>
+                <p>{{exercise.content}}</p>
+              </div>
+            </ng-template>
+          </ng-container>
+        </nav>
+        <div [ngbNavOutlet]="nav" class="mt-2"></div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <table class="table table-sm">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">VECKODAG</th>
+            <th scope="col">TRÄNINGSPASS</th>
+            <th scope="col">TID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let event of schedule; index as i">
+            <th scope="row">{{event.weekday}}</th>
+            <td>
+              <p *ngFor="let exercise of event.exercises; index as i">
+                {{exercise.title}}
+              </p>
+            </td>
+            <td>
+              <p *ngFor="let time of event.time; index as i">
+                {{time}}
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+

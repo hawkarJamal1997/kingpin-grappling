@@ -1,3 +1,4 @@
+import { QUESTIONS } from './mock-questions';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class FaqComponent implements OnInit {
 
   constructor() { }
-
+  questions = QUESTIONS
+  isCollapsed = true;
   ngOnInit(): void {
   }
 

@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { InriktningarService } from './inriktningar.service';
+import { GetImagesService } from './get-images.service';
 
-describe('InriktningarService', () => {
-  let service: InriktningarService;
+describe('GetImagesService', () => {
+  let service: GetImagesService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(InriktningarService);
+    service = TestBed.inject(GetImagesService);
   });
 
   it('should be created', () => {

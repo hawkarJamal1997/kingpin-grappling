@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   templateUrl: './contact.component.html',
@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 export class ContactComponent implements OnInit {
 
   constructor() { }
-
   ngOnInit(): void {
   }
 
