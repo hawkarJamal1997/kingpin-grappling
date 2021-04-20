@@ -3,15 +3,14 @@ html,body {
   position: relative;
   padding:0;
   height:100%;
-
-}
-
-h1 , .card-header h2{
-  color: rgba(244,88,110,1);
   background-image: url("./assets/background.jpg");
   background-size:     cover;
   background-repeat:   no-repeat;
   background-position: center center
+}
+
+h1 , .card-header h2{
+  color: rgba(244,88,110,1);
 }
 
 .container{

@@ -27,7 +27,6 @@ import { ScheduleComponent } from './schedule/schedule.component';
     VarderingarComponent,
     GrapplingTypeComponent,
     OmOssComponent,
-    KingpinKidsComponent,
     NavbarComponent,
     HomeComponent,
     ContactComponent,
