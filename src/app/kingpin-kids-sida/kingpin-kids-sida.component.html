@@ -1,0 +1,61 @@
+
+<div class="margin-card"  >
+    <div id="kingpin-kids">
+        <div class="hero-text">
+            <h1 >KINGPIN KIDS</h1>
+            <h2>
+                Ett Bättre Jag Ett Bättre Vi
+            </h2>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="text-center" *ngFor=" let kingpinKids of kingpinKidsList">
+    <div class="card-header">
+      <h2>{{kingpinKids.title}}</h2>
+    </div>
+  
+    <div class="card-deck">
+        <div class="card" *ngFor=" let content of kingpinKids.content">
+            <img  class="card-img-top" src={{content.content}} >
+            <div class="card-body">
+                <h5 class="card-title">{{content.title}}</h5>
+                <p class="card-text">
+                    {{content.content}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center" >
+    <div class="card-header">
+      <h2>FÖR MER INFO </h2>
+    </div>
+  
+    <div class="card-deck">
+        <div class="card" >
+            <img  class="card-img-top" src= "assets/kids-JR-contact.jpg">
+            <div class="card-body">
+                <h5 class="card-title">Frågor om Kingpin Jr besvaras av Denis Golubovic </h5>
+                <p class="card-text">
+                    <i class="bi bi-telephone-fill" style="font-size: 1.3rem;"></i>Telefon: 0730472828 <br>
+                    <i class="bi bi-envelope-fill" style="font-size: 1.3rem;"></i>Email: dengo392@gmail.com
+                </p>
+            </div>
+        </div>
+        <div class="card" >
+            <img  class="card-img-top" src= "assets/kids-contact.jpg">
+            <div class="card-body">
+                <h5 class="card-title">Frågor om Kidsgruppen besvaras av Samuel Johansson </h5>
+                <p class="card-text">
+                    <i class="bi bi-telephone-fill" style="font-size: 1.3rem;"></i>Telefon: 0730472828 <br>
+                    <i class="bi bi-envelope-fill" style="font-size: 1.3rem;"></i>Email: dengo392@gmail.com
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+

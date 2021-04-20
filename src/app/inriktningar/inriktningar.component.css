@@ -6,11 +6,11 @@
 }
  
 .card-deck{
-    max-width: 1300px;
+    max-width: 80%;
     margin:auto;
     margin-bottom: 50px;
     margin-top: 150px;
-    
+    justify-content: center;
 }
 
 

@@ -1,19 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
-html,
-body {
+html,body {
   position: relative;
   padding:0;
   height:100%;
-  background-image: url("./assets/background.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  
 }
 
-h1{
+h1 , .card-header h2{
   color: rgba(244,88,110,1);
 }
 .container{
   min-height: 100%;
 }
+

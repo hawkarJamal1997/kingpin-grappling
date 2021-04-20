@@ -1,8 +1,9 @@
-.card-deck{
-    max-width: 1300px;
+/*.card-deck{
+    max-width: 90%;
     margin:auto;
     margin-bottom: 50px;
     margin-top: 150px;
+    justify-content: center;
     
 }
 
@@ -25,4 +26,37 @@
     border-radius: 25px 25px 0px 0px;
 }
 
+*/
+.card:hover{
+    background-color: white;
+    width:105%;
+    box-shadow: 0px 7px 30px rgba(228, 64, 192, 0.699);
+}
+ 
+.card-deck{
+    max-width: 80%;
+    margin:auto;
+    margin-bottom: 50px;
+    margin-top: 150px;
+    justify-content: center;
+}
+
+
+.card{
+    max-width: 500px;
+    min-width: 300px;
+    border-radius: 25px;
+    background-color: whitesmoke;
+    box-shadow: 0px 7px 30px rgba(64, 72, 228, 0.699);
+    margin-bottom: 50px;    
+}
+
+
+
+
+.card img{
+    max-width: 700px;
+    min-width: 300px;
+    border-radius: 25px 25px 0px 0px;
+}
 
