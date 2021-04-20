@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InriktningarComponent } from './inriktningar.component';
+import { GrapplingTypeComponent } from './grapplingtype.component';
 
-describe('InriktningarComponent', () => {
-  let component: InriktningarComponent;
-  let fixture: ComponentFixture<InriktningarComponent>;
+describe('GrapplingTypeComponent', () => {
+  let component: GrapplingTypeComponent;
+  let fixture: ComponentFixture<GrapplingTypeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InriktningarComponent ]
+      declarations: [ GrapplingTypeComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(InriktningarComponent);
+    fixture = TestBed.createComponent(GrapplingTypeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

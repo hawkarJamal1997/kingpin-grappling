@@ -1,0 +1,29 @@
+.jumbotron{
+  width: 40rem;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #343a40;
+  color: white;
+}
+
+.card-img-top{
+  border-radius: 10px;
+}
+
+.table{
+  background-color: whitesmoke;
+  width: 100%;
+  margin: 1rem;
+  max-width: 40rem;
+}
+
+#first{
+  position: absolute;
+  bottom: 0;
+}
+
+h1{
+    color:black;
+    text-shadow: 2px 2px rgba(244,88,110,1);
+}
+

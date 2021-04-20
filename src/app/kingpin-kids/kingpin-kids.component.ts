@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Contact } from './mock-contact';
 
 @Component({
   selector: 'app-kingpin-kids',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class KingpinKidsComponent implements OnInit {
 
   constructor() { }
-
+  contact = Contact
   ngOnInit(): void {
   }
 

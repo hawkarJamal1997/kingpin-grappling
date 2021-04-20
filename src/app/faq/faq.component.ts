@@ -9,6 +9,7 @@ export class FaqComponent implements OnInit {
 
   constructor() { }
   questions = QUESTIONS
+  isCollapsed = true;
   ngOnInit(): void {
   }
 
