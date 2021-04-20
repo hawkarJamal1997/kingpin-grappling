@@ -18,6 +18,7 @@ import { HomeComponent } from './home/home.component';
 import { FaqComponent } from './faq/faq.component';
 import { KingpinKidsSidaComponent } from './kingpin-kids-sida/kingpin-kids-sida.component';
 import { LokalenComponent } from './lokalen/lokalen.component';
+import { MedlemskapComponent } from './medlemskap/medlemskap.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { LokalenComponent } from './lokalen/lokalen.component';
     FooterComponent,
     FaqComponent,
     KingpinKidsSidaComponent,
-    LokalenComponent
+    LokalenComponent,
+    MedlemskapComponent
   ],
   imports: [
     BrowserModule,
