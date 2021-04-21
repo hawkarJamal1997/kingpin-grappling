@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AgmCoreModule } from '@agm/core'
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import {MatRadioModule} from '@angular/material/radio'; 
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -37,6 +38,7 @@ import { MedlemskapComponent } from './medlemskap/medlemskap.component';
     MedlemskapComponent
   ],
   imports: [
+    MatRadioModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,

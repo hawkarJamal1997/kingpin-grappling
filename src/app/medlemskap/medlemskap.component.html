@@ -1,83 +1,117 @@
-<p>medlemskap works!</p>
 
 
 <div class="container py-5">
     <header class="py-5 text-center">
         <h1 class="display-4">Bli Medlem</h1>
-        <p class="lead mb-0">Some divider variants using &lt;hr&gt; element.    </p>
     </header>
-    <div class="col-sm">
         <div class="jumbotron">
             <nav ngbNav #nav="ngbNav" class="nav-tabs">
                 <ng-container ngbNavItem>
                     <a ngbNavLink>Hur Mycket Behöver jag betala?</a>
                     <ng-template ngbNavContent>
-                        <div>
-                            <form [formGroup]="form" >
-                                <fieldset class="row mb-3">
-                                    <h4 class="col-form-label ">Vilken Typ av Medlemskap?</h4>
+                        <div class="row">
+                            <div class="col">
+                                <form [formGroup]="form" >
+                                    <fieldset class="row mb-3">
+                                        <h4 class="col-form-label ">Vem Avser Betalningen?</h4>
+                                       <mat-radio-group [(ngModel)]="currentChoice">
+                                            <div class="form-check"*ngFor="let price of priceList">
+                                                <mat-radio-button (change)="choiceChanged(price)"  [value]="price">
+                                                    {{price.name}}
+                                                </mat-radio-button>
+                                            </div>                
+                                        </mat-radio-group>
+                                                                             
+                                    </fieldset>
+                                    <div class="row mb-3">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio"id="gridRadios2" formControlName="choice" (change)="valueChanged()"  value=1600 checked>
-                                            <label class="form-check-label" for="gridRadios1">
-                                                Vuxen 1600:-
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" id="gridRadios2" formControlName="choice" (change)="valueChanged()"  value=900 >
-                                            <label class="form-check-label" for="gridRadios2">
-                                                MEDLEM HUSKVARNA ATHLETIC 900:-
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio"  id="gridRadios2" formControlName="choice" (change)="valueChanged()"  value=900.001>
-                                            <label class="form-check-label" for="gridRadios2">
-                                                TJEJGRUPP 900:-
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio"  id="gridRadios2" formControlName="choice" (change)="valueChanged()" value=600>
-                                            <label class="form-check-label" for="gridRadios2">
-                                                KIDS 600:-
-                                            </label>
-                                            
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input " type="radio"   id="gridRadios2" formControlName="choice" (change)="valueChanged()" value=2000>
-                                            <label class="form-check-label" for="gridRadios">
-                                                FAMILJ* 2000:- (1600 för studenter)
-                                            </label>
-                                        </div>
-                                </fieldset>
-                                <div class="row mb-3">
-                                        <div class="form-check">
-                                            <input class="form-check-input" formControlName="student" (change)="valueChanged()" type="checkbox" id="isStudent" >
+                                            <input class="form-check-input" formControlName="student"  (ngModelChange)="studentValueChanged()"  type="checkbox" id="isStudent" >
                                             <label class="form-check-label" for="gridCheck1">
                                                 Är du student
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" formControlName="membership" (change)="valueChanged()" type="checkbox" id="membership" >
+                                            <input class="form-check-input" formControlName="membership" (ngModelChange)="memberChanged()" type="checkbox" id="membership" >
                                             <label class="form-check-label" for="gridCheck1">
                                                 Medlemsavgift (100:- per år som täcker försäkringar)
                                             </label>
-                                        </div>
+                                        </div>                                        
+                                    </div>
+                                    <h2>Totalt: {{total | currency : 'sek' }}</h2>
+                                </form>
+                            </div>
+                            <div class="col">
+                                <div class="card text-dark bg-info " >
+                                    <div class="card-header"><h1>Bra Att Veta</h1></div>
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush ">
+                                            <li class="list-group-item">
+                                                <h5 >I priset ingår fri tillgång till samtliga pass på Kingpin.</h5>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <h5>Medlemsavgift 100:- per år som täcker försäkringar</h5>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <h5>*Familj innebär vuxen tränande plus ett eller flera barn samt personer på samma adress</h5>
+                                            </li>
+                                        </ul>
+                                      
+                                    </div>
                                 </div>
-                                <h2>Totalt: {{total | currency : 'sek' }}</h2>
-                            </form>
+                            </div>
+                            
                         </div>
                     </ng-template>
                 </ng-container>
                 <ng-container ngbNavItem>
                     <a ngbNavLink>Betalning methoder</a>
                     <ng-template ngbNavContent>
-                    <div>
-                        <h2>bye</h2>
-                        <p>bye</p>
-                    </div>
+                        <div>
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                            <img src=" assets/bankgirot-logo.svg ">
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <h5><strong>Bankgiro Nummer:</strong> 5138-6217 </h5>
+                                            <h6>Var noga med att lämna medddelande om vad betalningen avser och vem som gjort ibetalningen.</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                            <img src="assets/swish-logotype.svg">
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <h5><strong>Swish Nummer:</strong> 123-51-01-357 </h5>
+                                            <h6>Vid inbetalning med Swish meddela vad betalningen gäller samt avsändare.</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                            <img src="assets/plusgirot-logo.svg">
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <h5><strong>Plusgirot Nummer:</strong> 80-78-62-8 </h5>
+                                            <h6>Ange namn som meddelande för den betalningen avser.</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </ng-template>
                 </ng-container>
             </nav>
             <div [ngbNavOutlet]="nav" class="mt-2"></div>
         </div>
     </div>
-</div>
