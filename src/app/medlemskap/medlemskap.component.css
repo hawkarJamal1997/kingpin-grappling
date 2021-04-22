@@ -1,7 +1,5 @@
 
-.col-sm-10{
-    margin-bottom:25px;
-}
+
 
 img{
     max-height: 30px;
@@ -20,11 +18,12 @@ img{
 
 .jumbotron {
     margin-bottom: 2rem;
-    background-color: whitesmoke;
     border-radius: .5rem;
+    background:white;
+    box-shadow: 0px 7px 30px rgba(63, 64, 80, 0.699);
 }
 
 .mat-radio-button ~ .mat-radio-button {
     margin-left: 16px;
-    display: block;
-  }
+}
+

@@ -16,7 +16,7 @@ export const PriceList: Price[] = [
     {
         id: 3,
         name:'Tjejgrupp 900:-',
-        value: 900.0000000001,
+        value: 900,
     },
     {
         id: 4,

@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AgmCoreModule } from '@agm/core'
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {MatRadioModule} from '@angular/material/radio'; 
+import {MatExpansionModule} from '@angular/material/expansion'; 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,7 +25,6 @@ import { MedlemskapComponent } from './medlemskap/medlemskap.component';
 
 @NgModule({
   declarations: [
-    
     AppComponent,
     VarderingarComponent,
     InriktningarComponent,
@@ -38,6 +39,8 @@ import { MedlemskapComponent } from './medlemskap/medlemskap.component';
     MedlemskapComponent
   ],
   imports: [
+    BrowserAnimationsModule,
+    MatExpansionModule,
     MatRadioModule,
     FormsModule,
     ReactiveFormsModule,
