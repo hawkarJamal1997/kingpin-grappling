@@ -1,7 +1,11 @@
 import { GrapplingTypeComponent } from './grapplingtype/grapplingtype.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AgmCoreModule } from '@agm/core';
+import { AgmCoreModule } from '@agm/core'
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import {MatRadioModule} from '@angular/material/radio'; 
+import {MatExpansionModule} from '@angular/material/expansion'; 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +21,7 @@ import { HomeComponent } from './home/home.component';
 import { FaqComponent } from './faq/faq.component';
 import { KingpinKidsSidaComponent } from './kingpin-kids-sida/kingpin-kids-sida.component';
 import { LokalenComponent } from './lokalen/lokalen.component';
+import { MedlemskapComponent } from './medlemskap/medlemskap.component';
 
 import { ScheduleComponent } from './schedule/schedule.component';
 
@@ -34,9 +39,15 @@ import { ScheduleComponent } from './schedule/schedule.component';
     FaqComponent,
     KingpinKidsSidaComponent,
     LokalenComponent,
-    ScheduleComponent
+    ScheduleComponent,
+    MedlemskapComponent
   ],
   imports: [
+    BrowserAnimationsModule,
+    MatExpansionModule,
+    MatRadioModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     NgbModule,
