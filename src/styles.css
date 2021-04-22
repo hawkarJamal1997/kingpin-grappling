@@ -6,10 +6,7 @@ html,body {
   position: relative;
   padding:0;
   height:100%;
-  background-image: url("./assets/background.jpg");
-  background-size:     cover;
-  background-repeat:   no-repeat;
-  background-position: center center
+  
 }
 
 h1 , .card-header h2{
@@ -18,10 +15,6 @@ h1 , .card-header h2{
 
 .container{
   display: block;
-}
-
-h1{
-  color: whitesmoke;
 }
 
 h2{
