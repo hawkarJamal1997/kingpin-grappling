@@ -24,7 +24,6 @@ export class MedlemskapComponent implements OnInit {
   };
 
   form = new FormGroup({
-    choice: new FormControl(''),
     student:new FormControl(false),
     membership: new FormControl(false)
   });
