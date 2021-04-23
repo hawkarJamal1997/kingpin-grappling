@@ -1,19 +1,90 @@
 <div class="container">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" id="hoverable" href="home"><img src="assets/kingpin_logo.jpg" alt="" width="70"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link" id="hoverable" href="/membership">Medlemskap</a>
-          <a class="nav-link" id="hoverable" href="/schedule">Schema</a>
-          <a class="nav-link" id="hoverable" href="/KingpinKids">Kids</a>
-          <a class="nav-link" id="hoverable" href="/contact">Kontakt</a>
-          <a class="nav-link" id="hoverable" href="/about">Om oss</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" id="hoverable" href="home"><img src="assets/kingpin_logo.jpg" alt="" width="70"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <!--<div class="navbar-nav" style="--bs-scroll-height: 100px;">
+                    <a class="nav-link" id="hoverable" href="/membership">Medlemskap</a>
+                    <a class="nav-link" id="hoverable" href="/schedule">Schema</a>
+                    <a class="nav-link" id="hoverable" href="/KingpinKids">Kids</a>
+                    <a class="nav-link" id="hoverable" href="/contact">Kontakt</a>
+                    <a class="nav-link" id="hoverable" href="/about">Om oss</a>
+                </div>-->
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 300px;">
+                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="/membership">Medlemskap</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/schedule">Schemat</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Kontakt</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/KingpinKids"> Kids</a>
+                    </li>
+                    
+                    <li class="nav-item dropdown" >
+                        <a class="nav-link" id="hoverable" href="/about">Om oss</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </div>
-  </nav>
+    </nav>
 </div>
+<!---
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="assets/kingpin_logo.jpg"  width="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Medlemskap</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/membership">Träningsschemat</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Kontakt</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/KingpinKids">Kingpin Kids</a>
+                </li>
+                
+                <li class="nav-item dropdown" ngbDropdown>
+                    <a class="nav-link dropdown-toggle" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" ngbDropdownToggle>
+                        Om KingPin
+                    </a>
+                    <ul class="dropdown-menu"  ngbDropdownMenu aria-labelledby="navbarScrollingDropdown">
+                        <li ngbDropdownItem><a  class="dropdown-item" href="/about">Om oss</a></li>
+                        <li ngbDropdownItem><a  class="dropdown-item" href="/about">Våra Värderingar</a></li>
+                        <li ngbDropdownItem><a class="dropdown-item" href="/about">Våra Inriktningar</a></li>
+                        <li ngbDropdownItem><a class="dropdown-item" href="/about">Om Kingpin kids</a></li>
+                        <li ngbDropdownItem><a class="dropdown-item" href="/about">Träningslokalen</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+-->

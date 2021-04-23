@@ -24,6 +24,7 @@ import { LokalenComponent } from './lokalen/lokalen.component';
 import { MedlemskapComponent } from './medlemskap/medlemskap.component';
 
 import { ScheduleComponent } from './schedule/schedule.component';
+import { HomeHeaderComponent } from './home-header/home-header.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { ScheduleComponent } from './schedule/schedule.component';
     KingpinKidsSidaComponent,
     LokalenComponent,
     ScheduleComponent,
-    MedlemskapComponent
+    MedlemskapComponent,
+    HomeHeaderComponent
   ],
   imports: [
     BrowserAnimationsModule,
