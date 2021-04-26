@@ -6,6 +6,7 @@ html,body {
   position: relative;
   padding:0;
   height:100%;
+  box-sizing: border-box;
   
 }
 
@@ -17,7 +18,5 @@ h1 , .card-header h2{
   display: block;
 }
 
-h2{
-  color: whitesmoke;
-}
+
 

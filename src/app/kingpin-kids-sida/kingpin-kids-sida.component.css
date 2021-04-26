@@ -2,18 +2,6 @@ body{
     width: 100%;
 }
 
-#kingpin-kids{
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    height: 100%;
-    max-height: 100%;
-    width: 100%;
-    background-image: url("src\assets\kingpin_kids4.jpg");
-}
 
 .hero-text {
     text-align: center;
@@ -72,3 +60,49 @@ h3{
 p{
     color:rgb(90, 88, 88)
 }
+
+
+
+
+.header-unit {
+    position: relative;
+    
+}
+
+#img-container {
+    height:100%;
+    width:100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#img-container .hero-text{
+    position: absolute;
+    z-index: 1;
+    color: white;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    text-align: center;
+}
+
+#kingpin-kids {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 80%;
+    max-height: 100%;
+    width: 100%;
+    background-image: url("src\assets\kingpin_kids4.jpg");
+    position: absolute;
+    z-index: 0;
+}
+#kingpin-kids.fillWidth {
+    width: 100%;
+}
+  
