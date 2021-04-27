@@ -32,7 +32,6 @@ video {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-
   position: absolute;
   z-index: 0;
 }
