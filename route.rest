@@ -1,0 +1,34 @@
+###
+GET http://localhost:3000/contact
+
+####### GET WEEK #######
+
+GET http://localhost:3000/schedule
+
+####### GET DAY #######
+
+GET http://localhost:3000/schedule/608901363eb289158c0145ac
+
+####### CREATE DAY #######
+
+POST http://localhost:3000/schedule
+Content-Type: application/json
+
+{
+    "weekday": "LÖRDAG",
+    "events": { "exercise": ["BJJ", "Fri mattid"], "time": ["12:00 - 13:00", "16:00 ->"] }
+}
+
+####### UPDATE DAY #######
+
+PATCH  http://localhost:3000/schedule/608901363eb289158c0145ac
+Content-Type: application/json
+
+{
+    "weekday": "MÅNDAG",
+    "events": { "exercise": ["No-GI"], "time": ["12:00 - 13:00"] }
+}
+
+####### DELETE DAY #######
+
+DELETE  http://localhost:3000/schedule/608913ed545a282a0022aef22
