@@ -1,14 +1,6 @@
-###
-GET http://localhost:3000/message
-
-
 ####### GET WEEK #######
 
 GET http://localhost:3000/schedule
-
-####### GET DAY #######
-
-GET http://localhost:3000/schedule/608901363eb289158c0145ac
 
 ####### CREATE DAY #######
 

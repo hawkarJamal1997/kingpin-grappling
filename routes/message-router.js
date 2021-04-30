@@ -1,6 +1,6 @@
 const express = require('express')
-const fetch = require('node-fetch')
 const nodemailer = require('nodemailer')
+require('dotenv/config')
 
 const router = express.Router()
 
@@ -11,21 +11,27 @@ router.post('/', async (req, res) => {
     host: 'smtp.ethereal.email',
     port: 587,
     auth: {
-        user: 'catherine.heathcote66@ethereal.email',
-        pass: 'UjU6H6ZnY6ZhF2C7Ny'
+        user: process.env.MAIL_USER,
+        pass: process.env.MAIL_PASS
     }
   });
 
-  // send mail with defined transport object
-  let info = await transporter.sendMail({
+  const mailOptions = {
     from: `${req.body.name} " " ${req.body.email}`,
     to: "catherine.heathcote66@ethereal.email", // list of recievers
     subject: "Contact kingping", 
     text: `${req.body.message}`, 
     html: `<b>${req.body.message}</b>`, 
-  });
+  }
 
-  res.status(200).end()
+  // send mail with defined transport object
+  transporter.sendMail(mailOptions, (err, info) => {
+    if(err) {
+      res.status(500).json({ message: `Error has occured ${err}`})
+    }
+    res.status(200).json({ message: `Message sent: ${info.response}`})
+  })
+  
 })
 
 module.exports = router

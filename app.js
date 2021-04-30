@@ -1,9 +1,7 @@
-const path = require('path')
 const express = require('express')
 const cors = require('cors')
 const expressHandlebars = require('express-handlebars')
 const mongoose = require('mongoose')
-const nodemailer = require('nodemailer')
 require('dotenv/config')
 
 //importing routes

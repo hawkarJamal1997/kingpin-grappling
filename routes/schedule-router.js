@@ -13,11 +13,6 @@ router.get('/', async (req, res) => {
    }
 })
 
-// Get day of week
-router.get('/:id', getDay, async (req, res) => {
-        res.json(res.day)
- })
-
 // Create a schedule for a day
 router.post('/', async (req, res) => {
     
