@@ -1,5 +1,6 @@
 ###
-GET http://localhost:3000/contact
+GET http://localhost:3000/message
+
 
 ####### GET WEEK #######
 
