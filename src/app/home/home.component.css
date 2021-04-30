@@ -1,5 +1,6 @@
-*{
+body{
   box-sizing: border-box;
+  padding: .5rem 1rem;
 }
 div.instagram .card{
   margin-right:10px;
@@ -84,15 +85,34 @@ div.instagram .card:hover{
 .bar{
   height:120px;
   width:100%;
-  background-color:aliceblue;
-  margin-top: 16px;
+  background-color:white;
+  margin-top: 40px;
+  margin-bottom: 40;
+  max-width: 850px;
   justify-content: center;
-  
-  
+  border-top-color: 7px rgba(48, 47, 48, 0.439); 
+  align-self: center;
+  position: relative;
 }
-.tb{
-  width:50%;
-  
+#numberBox{
+  background-color: #3D6AA2;
+  width: 160px;
+  height: 90px;
+  position: absolute;
+  top: calc(10% - 10px);
+  left: calc(50% - 80px);
+}
+
+.bar::after{  height:120px;
+  width:100%;
+  background-color:white;
+  margin-top: 40px;
+  margin-bottom: 40;
+  max-width: 850px;
+  justify-content: center;
+  border-top-color: 7px rgba(48, 47, 48, 0.439); 
+  align-self: center;
+  position: relative;
 }
 td{
   font-size:20px;
@@ -131,7 +151,7 @@ a:hover{
 }
 div.instagram{
   padding: 2% 10% 5% 5%;
-  background-color: aliceblue;
+  background-color: white;
 
 }
 
