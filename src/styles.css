@@ -14,9 +14,7 @@ html,body {
   
 }
 
-h1 , .card-header h2{
-  color: rgba(244,88,110,1);
-}
+
 
 .container{
   display: block;

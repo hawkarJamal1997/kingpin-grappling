@@ -1,61 +1,11 @@
-
-.header-unit {
-  height: 75%;
-  margin-top: 50px;
-  position: relative;
-  
-}
-
-#video-container {
-  height:100%;
-  width:100%;
-  overflow: hidden;
-  position: relative;
-}
-
-#video-container .hero-text{
-  position: absolute;
-  z-index: 1;
-  color: white;
-  margin: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 85%;
-  text-align: center;
-}
-
 video {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  position: absolute;
-  z-index: 0;
+ max-height: 45%;
+ align-items: flex-end;
 }
-video.fillWidth {
- min-height: 75%;
-}
+
 
 h1{
   font-family: Comic Sans MS;
   font-size:50px;
 }
 
-h3{
-  color: rgba(244,88,110,1);
-}
-
-@media only screen and (min-width: 1200px) {
-  video.fillWidth {
-    width: 100%;
-    min-height: 75%;
-   }
-   
-  h1{
-    font-family: Comic Sans MS;
-    font-size:75px;
-  }
-}

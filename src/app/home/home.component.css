@@ -82,45 +82,42 @@ div.instagram .card:hover{
   border:none;
 }
 
+
 .bar{
   height:120px;
+  height:120px;
   width:100%;
+  width:100%;
+  background-color:aliceblue;
   background-color:white;
-  margin-top: 40px;
+  margin-top: 16px;
+  margin-top: 60px;
   margin-bottom: 40;
   max-width: 850px;
   justify-content: center;
+  justify-content: center;
+
   border-top-color: 7px rgba(48, 47, 48, 0.439); 
+
   align-self: center;
   position: relative;
-}
-#numberBox{
-  background-color: #3D6AA2;
-  width: 160px;
-  height: 90px;
-  position: absolute;
-  top: calc(10% - 10px);
-  left: calc(50% - 80px);
 }
 
-.bar::after{  height:120px;
-  width:100%;
-  background-color:white;
-  margin-top: 40px;
-  margin-bottom: 40;
-  max-width: 850px;
-  justify-content: center;
-  border-top-color: 7px rgba(48, 47, 48, 0.439); 
-  align-self: center;
-  position: relative;
+.tb{
+  width:50%;
 }
+
 td{
   font-size:20px;
   padding:12px;
   font-style: Comic;
 }
+
 th{
+  
   font-size:20px;
+  font-size:20px;
+  padding:12px;
   padding:12px;
 }
 
