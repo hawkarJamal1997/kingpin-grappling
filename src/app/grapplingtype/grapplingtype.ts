@@ -1,6 +1,5 @@
-
 export interface GrapplingType{
-    title: string;
-    content?:string;
-    imgPath?:string;
+    name: string;
+    content?: string;
+    imgPath?: string;
 }

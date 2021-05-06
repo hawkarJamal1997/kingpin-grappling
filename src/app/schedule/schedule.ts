@@ -1,7 +1,6 @@
-import { GrapplingType } from "../grapplingtype/grapplingtype";
+import { Events } from './event';
 
 export interface Schedule{
-  weekday: string;
-  exercises: GrapplingType[];
-  time: String[];
+  weekday: string,
+  events: Events
 }

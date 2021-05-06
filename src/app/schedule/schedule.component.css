@@ -2,8 +2,13 @@
   width: 40rem;
   margin: 1rem;
   padding: 1rem;
+  background: none;
+  font-family: 'Helvetica Neue', sans-serif
+}
+
+ul{
+  display: block;
   background-color: #343a40;
-  color: white;
 }
 
 .card-img-top{
@@ -25,5 +30,24 @@
 h1{
     color:black;
     text-shadow: 2px 2px rgba(244,88,110,1);
+}
+
+h2 {
+  width: 100%;
+  text-align: center;
+  border-bottom: 2px solid #000;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  background: #FFFFFF;
+  text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(0,0,0,0.15);
+}
+
+h2 span {
+   background:#fff;
+   padding:0 10px;
 }
 

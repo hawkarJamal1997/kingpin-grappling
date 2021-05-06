@@ -1,8 +1,12 @@
+import { ScheduleService } from './schedule/schedule.service';
 import { GrapplingTypeComponent } from './grapplingtype/grapplingtype.component';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import  localeSV  from '@angular/common/locales/sv'
 import { BrowserModule } from '@angular/platform-browser';
 import { AgmCoreModule } from '@agm/core';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -20,6 +24,7 @@ import { LokalenComponent } from './lokalen/lokalen.component';
 
 import { ScheduleComponent } from './schedule/schedule.component';
 
+registerLocaleData(localeSV);
 
 @NgModule({
   declarations: [
@@ -40,11 +45,17 @@ import { ScheduleComponent } from './schedule/schedule.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCg_1k4w5b0sK2QIWzchHV1lQx1RzDJzdA'
     })
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'sv' },
+    ScheduleService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
