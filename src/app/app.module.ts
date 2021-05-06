@@ -1,8 +1,12 @@
+import { ScheduleService } from './schedule/schedule.service';
 import { GrapplingTypeComponent } from './grapplingtype/grapplingtype.component';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import  localeSV  from '@angular/common/locales/sv'
 import { BrowserModule } from '@angular/platform-browser';
-import { AgmCoreModule } from '@agm/core'
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { AgmCoreModule } from '@agm/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatRadioModule} from '@angular/material/radio'; 
 import {MatExpansionModule} from '@angular/material/expansion'; 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -26,6 +30,7 @@ import { MedlemskapComponent } from './medlemskap/medlemskap.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { HomeHeaderComponent } from './home-header/home-header.component';
 
+registerLocaleData(localeSV);
 
 @NgModule({
   declarations: [
@@ -53,11 +58,17 @@ import { HomeHeaderComponent } from './home-header/home-header.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCg_1k4w5b0sK2QIWzchHV1lQx1RzDJzdA'
     })
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'sv' },
+    ScheduleService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

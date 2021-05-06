@@ -1,24 +1,47 @@
-<div class="container">
-  <div id="portfolio" class="container-fluid text-center bg-grey">
-    <h1 class="display-1"><strong>KONTAKT</strong></h1>
-    <form>
-      <br><h5>Förutom att maila kan du kan även kontakta oss via formuläret. Glöm inte att fylla i namn och giltig
-        emailadress. <br>
-        Vi hör av oss så snart vi kan.
-      </h5> <br>
-      <div class="form-group">
-        <label class="sr-only" for="name">Namn:</label>
-        <input type="text" class="form-control" id="name" placeholder="Namn*">
+<div class="container text-center">
+  <h2 class="margin"><span>Kontakta oss</span></h2>
+  <div class="row">
+    <div class="col-sm">
+      <div class="jumbotron">
+        <h3><strong>Hur ni hittar oss</strong></h3>
+        <p><i class="bi bi-geo-alt-fill" style="font-size: 1.5rem;"></i>Grännavägen 24, 561 34 Huskvarna, ingång sker via Engelbrektsgatan</p>
+          <p>Vill ni ta buss så tar ni buss 101 till busshållplats Huskvarna Kroatorpet </p>
+          <p>Promenad från södra esplanaden Huskvarna<br> <em>ca 10-12 min.</em> </p><br>
+        <h3><strong>Kontakta oss på följande</strong></h3>
+        <p><i class="bi bi-telephone-fill" style="font-size: 1.5rem;"></i> +46703401360 <br>
+          <a href="mailto:info@kingpingrappling.se" style="color: black;">
+            info@kingpingrappling.se
+          </a>
+        </p>
+        <a href="https://www.facebook.com/kingpingrappling.se/">
+          <i class="bi bi-facebook" style="font-size: 2.5rem;"></i>
+        </a>
+        <a href="https://www.instagram.com/kingpingrappling/">
+          <i class="bi bi-instagram" style="margin-left: 10px; font-size: 2.5rem; color:#fb3958"></i>
+        </a>
       </div>
-      <div class="form-group">
-        <label class="sr-only" for="email">Email address:</label>
-        <input type="email" class="form-control" id="email" placeholder="Email*">
-      </div>
-      <div class="form-group">
-        <label class="sr-only" for="message">Meddelande:</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Meddelande*"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary" id="button">Skicka meddelande</button>
-    </form>
+    </div>
+    <div class="col-sm">
+      <form [formGroup]="messageForm" ngNativeValidate (ngSubmit)="onSubmit()">
+        <br><h4>Förutom att maila kan ni kan även kontakta oss via formuläret. Glöm inte att fylla i namn och giltig
+          emailadress. <br>
+          Vi hör av oss så snart vi kan.
+        </h4> <br>
+        <div class="form-group">
+          <label class="sr-only" for="name">Namn:</label>
+          <input type="text" class="form-control" #name formControlName="name" placeholder="Namn*" required>
+        </div>
+        <div class="form-group">
+          <label class="sr-only" for="email">Email address:</label>
+          <input type="email" class="form-control" #email formControlName="email" placeholder="Email*" required>
+        </div>
+        <div class="form-group">
+          <label class="sr-only" for="message">Meddelande:</label>
+          <textarea class="form-control" formControlName="message" #message rows="3" placeholder="Meddelande*" required minlength="15" maxlength="5000"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" id="button">Skicka meddelande</button>
+      </form>
+      <ngb-alert *ngIf="didSend" type="success" [dismissible]="true">Meddelandet har skickats!</ngb-alert>
+    </div>
   </div>
 </div>

@@ -10,14 +10,14 @@ import {KingpinKids} from './kingpinKids'
 export class KingpinKidsSidaComponent implements OnInit {
   kingpinKidsList : KingpinKids[] = [];
 
-  constructor(private kingpinKidsService:KingpinKidsService) { }
+  constructor(private kingpinKidsService: KingpinKidsService) { }
 
   getKingpinKidsList():void{
 
     this.kingpinKidsList = this.kingpinKidsService.getContent()
 
   }
-  
+
 
   ngOnInit(): void {
     this.getKingpinKidsList()

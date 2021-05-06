@@ -12,7 +12,8 @@ export class ScheduleComponent implements OnInit {
 
   constructor(private scheduleService: ScheduleService, private grapplingType: GrapplingTypeService) { }
 
-  schedule: Schedule[] = [];
+  schedule$: Schedule[] = [];
+  options = { weekday: "long", year: "numeric", month: "long", day: "numeric" }
   images: String[] = [];
   exercises: GrapplingType[] = [];
   active = 1
@@ -23,7 +24,11 @@ export class ScheduleComponent implements OnInit {
   }
 
   getSchedule(): void {
-    this.schedule = this.scheduleService.getSchedule()
+    this.scheduleService.getSchedule()
+      .subscribe(schedule => {
+        console.log(schedule)
+        this.schedule$ = schedule
+      })
   }
 
   getExercises(): void {
