@@ -1,11 +1,53 @@
-video {
- max-height: 45%;
- align-items: flex-end;
+img{
+  max-width: 100%;
+  min-width: 300px;
+}
+.container{
+  padding: 10rem 10%;
+  width: 100%;
+  height: 70%;
+  display: block;
 }
 
+a{ 
+  transition: .8s ease;
+  width:200px;
+  font-size: 20px;
+  height: 50px;
+  border-radius: 10px;
+  border: 2px solid;
+}
+
+a:hover{
+  background-color:white;
+  color: blue;
+}
 
 h1{
-  font-family: Comic Sans MS;
   font-size:50px;
+  color:gray;
 }
 
+.hero-text{
+  display: inline-block;
+  bottom: 200px;
+  vertical-align: middle;
+}
+
+.header{  
+  height: 80%;
+  padding: 4rem 10%;
+
+}
+
+.col{
+  padding-top:10%;
+  display: table-cell;
+
+}
+
+.bottomdiv {
+  position:absolute;
+  left:0;
+  bottom:0;
+}
