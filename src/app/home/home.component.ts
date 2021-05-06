@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+
+  muteVideo(){
+    let vid = document.getElementById("video");
+    //vid. = true; 
+  }
+
   constructor() { }
 
   ngOnInit(): void {
+    this.muteVideo()
   }
 
 }

@@ -1,24 +1,21 @@
-#carousel{
+.carousel{
+    margin-top:100px;
     margin: auto;
     display: block;
     box-shadow: 0px 7px 30px rgba(54, 51, 51, 0.596);
-    border-radius: 25px ;
 }
 
+.carousel-inner{
+    margin-top:100px;
+}
 
 .card{
     margin:auto;
-    margin-top:150px;
-    box-shadow: 0px 7px 30px rgba(36, 34, 34, 0.678);
+    margin-top:15px;
+    box-shadow: 0px 7px 30px rgba(36, 34, 34, 0.568);
     margin-bottom: 150px;
     max-width: 850px;
-    height:1000px;
-    border-radius: 25px;
-}
-
-img{
-    display: block;
-    border-radius:25px ;
+    border-radius: 10px;
 }
 
 

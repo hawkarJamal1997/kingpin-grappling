@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { FaqComponent } from './faq/faq.component';
 import {KingpinKidsSidaComponent} from './kingpin-kids-sida/kingpin-kids-sida.component';
+import { MedlemskapComponent} from './medlemskap/medlemskap.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'KingpinKids', component: KingpinKidsSidaComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'about', component: OmOssComponent },
-  { path: 'faq', component: FaqComponent }
+  {path:'membership', component: MedlemskapComponent},
+  {path: 'faq', component: FaqComponent},
 ];
 
 @NgModule({
