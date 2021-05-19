@@ -1,60 +1,41 @@
-/*.card-deck{
-    max-width: 90%;
-    margin:auto;
-    margin-bottom: 50px;
-    margin-top: 150px;
-    justify-content: center;
-
-}
-
+.container{
+  max-width: 60rem;
+  margin-top: 2rem;
 }
 
 .card{
-    max-width: 400px;
-    min-width: 300px;
-    border-radius: 25px;
-    background-color: whitesmoke;
-    box-shadow: 0px 7px 30px rgba(64, 72, 228, 0.699);
-    margin-bottom: 50px;
+  border: none;
+  height: 392px;
 }
 
-.card img{
-    max-width: 400px;
-    min-width: 300px;
-    border-radius: 25px 25px 0px 0px;
+.card-body{
+  visibility: hidden;
 }
 
-*/
-.card:hover{
-    background-color: white;
-    width:105%;
-    box-shadow: 0px 7px 30px rgba(228, 64, 192, 0.699);
+img{
+  margin: auto;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 100%;
+  transition: box-shadow .8s, width .8s, height .8s;
 }
 
-.card-deck{
-    max-width: 80%;
-    margin:auto;
-    margin-bottom: 50px;
-    margin-top: 150px;
-    justify-content: center;
+img:hover{
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;  width: 16rem;
+  height: 16rem;
+  width: 16rem;
 }
 
-
-.card{
-    max-width: 500px;
-    min-width: 300px;
-    border-radius: 25px;
-    background-color: whitesmoke;
-    box-shadow: 0px 7px 30px rgba(64, 72, 228, 0.699);
-    margin-bottom: 50px;
+img:hover + div.card-body{
+  visibility: visible;
+  transition-delay: 0.25s;
 }
 
-
-
-
-.card img{
-    max-width: 700px;
-    min-width: 300px;
-    border-radius: 25px 25px 0px 0px;
+h5{
+  font-weight: 900;
 }
 
+p{
+  font-size: 1rem;
+  font-weight: 600;
+}

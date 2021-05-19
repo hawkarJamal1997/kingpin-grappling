@@ -1,14 +1,13 @@
 <div class="container text-center">
-  <h2 class="margin"><span>Träning</span></h2>
   <div class="row">
-    <div class="col-sm">
+    <div class="col-sm-6">
       <div class="jumbotron">
         <ul ngbNav #nav="ngbNav" class="nav-tabs">
           <li ngbNavItem *ngFor="let exercise of exercises; index as i">
             <a ngbNavLink>{{exercise.name}}</a>
             <ng-template ngbNavContent>  <img src="{{exercise.imgPath}}" class="card-img-top" alt="image of exercise">
               <div>
-                <h3>{{exercise.name}}</h3>
+                <h3><strong>{{exercise.name}}</strong></h3>
                 <p>{{exercise.content}}</p>
               </div>
             </ng-template>
@@ -17,8 +16,8 @@
         <div [ngbNavOutlet]="nav"></div>
       </div>
     </div>
-    <div class="col-sm">
-      <table class="table table-sm">
+    <div class="col-sm-6">
+      <table class="table">
         <thead class="thead-dark">
           <tr>
             <th scope="col">VECKODAG</th>

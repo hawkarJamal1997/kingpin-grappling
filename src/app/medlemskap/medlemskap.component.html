@@ -7,11 +7,11 @@
         <div class="jumbotron">
             <nav ngbNav #nav="ngbNav" class="nav-tabs">
                 <ng-container ngbNavItem>
-                    <a ngbNavLink>Hur Mycket Behöver jag betala?</a>
+                    <a ngbNavLink>Hur mycket behöver jag betala?</a>
                     <ng-template ngbNavContent>
                         <div class="row">
                             <div class="col">
-                                
+
                                 <fieldset class="row mb-3">
                                     <h4 class="col-form-label ">Vem Avser Betalningen?</h4>
                                     <mat-radio-group [(ngModel)]="currentChoice">
@@ -19,9 +19,9 @@
                                             <mat-radio-button (change)="choiceChanged(price)"  [value]="price">
                                                 <span id="content">{{price.name}}</span>
                                             </mat-radio-button>
-                                        </div>                
+                                        </div>
                                     </mat-radio-group>
-                                                                            
+
                                 </fieldset>
                                 <form [formGroup]="form" >
                                     <div class="row mb-3">
@@ -36,7 +36,7 @@
                                             <label class="form-check-label" for="gridCheck1">
                                                 Medlemsavgift (100:- per år som täcker försäkringar)
                                             </label>
-                                        </div>                                        
+                                        </div>
                                     </div>
                                     <h2>Totalt: {{total | currency : 'sek' }}</h2>
                                 </form>
@@ -56,16 +56,16 @@
                                                 <h5>*Familj innebär vuxen tränande plus ett eller flera barn samt personer på samma adress</h5>
                                             </li>
                                         </ul>
-                                      
+
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </ng-template>
                 </ng-container>
                 <ng-container ngbNavItem>
-                    <a ngbNavLink>Betalning Methoder</a>
+                    <a ngbNavLink>Betalnings Metoder</a>
                     <ng-template ngbNavContent>
                         <ngb-accordion>
                             <ngb-panel [disabled]="disabled" [cardClass]="disabled ? 'disabled' : ''"  *ngFor = "let method of paymentMethods">
@@ -84,7 +84,7 @@
                                     </div>
                                 </ng-template>
                             </ngb-panel>
-                        </ngb-accordion>  
+                        </ngb-accordion>
                     </ng-template>
                 </ng-container>
             </nav>

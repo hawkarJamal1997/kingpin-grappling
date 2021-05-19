@@ -1,14 +1,13 @@
-<div class="text-center">
-  <div class="card-header">
-    <h2>VÅRA VÄRDERINGAR</h2>
-  </div>
+<div class="container text-center">
+  <h2>Kingpins värderingar</h2>
   <div class="card-deck">
-    <div class="card"  *ngFor="let vardering of varderingar">
-      <img  class="card-img-top" src={{vardering.imgPath}} >
+    <div class="card" *ngFor="let vardering of varderingar">
+      <h5>{{vardering.title}}</h5>
+      <img class="card-img-top" src={{vardering.imgPath}} alt="values image">
       <div class="card-body">
-        <h5 class="card-title">{{vardering.title}}</h5>
-        <p class="card-text">{{vardering.content}}</p>
-      </div>
+          <h5 class="card-title"></h5>
+          <p class="card-text">{{vardering.content}}</p>
+        </div>
     </div>
   </div>
 </div>
