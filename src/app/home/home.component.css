@@ -10,7 +10,6 @@ div.instagram .card{
   max-height: 460px;
   margin: auto;
   box-shadow: 0px 7px 30px rgba(175, 149, 174, 0.699);
-
 }
 
 div.instagram .card:hover{
@@ -19,28 +18,9 @@ div.instagram .card:hover{
   box-shadow: 0px 7px 30px rgba(194, 176, 193, 0.699);
 }
 
-.card-deck{
-  width: 100%;
-  margin:auto;
-  margin-bottom: 50px;
-  margin-top: 150px;
-  justify-content: center;
-}
 
-#rotate30{
-  transform: rotate(30deg)
-}
-
-#rotate-30{
-  transform: rotate(-30deg)
-}
-
-#rotate-10{
-  transform: rotate(-10deg)
-}
-
-#rotate10{
-  transform: rotate(10deg)
+.col-6{
+  min-width: 375px;
 }
 
 .col{
@@ -49,37 +29,25 @@ div.instagram .card:hover{
 
 
 .container {
-  position: relative;
-  width: 50%;
-  max-width: 300px;
+  min-height:950px;
+  padding-top: 9%;
 }
 
-
-
-.overlay {
-  align-self: center;
-  position: absolute; 
-  bottom: 40; 
-  background: rgba(214, 208, 208, 0.556); /* Black see-through */
-  color: #000000ec; 
-  width: 80%;
-  transition: .5s ease;
-  font-size: 20px;
-  padding: 20px;
+.col-4{
+  min-width: 250px;
+  max-width: 50%;
 }
 
-.card:hover .overlay {
-  transform: scale(1.1);
-}
-
-
-.card-group .card img {
-  padding:15px;
-}
-
-.card-group .card {
-  min-width: 350px;
-  border:none;
+.col-4 .card {
+  border-radius:12px 0px 0px 12px;
+  border-width: 2px 0px 2px 3px;
+  border-style: solid;
+  border-color: blue;
+  margin-top:15px;
+  box-shadow: 0px 7px 30px rgba(216, 208, 216, 0.699);
+  max-height:500px;
+  display: block;
+  word-wrap: break-word;
 }
 
 
@@ -114,7 +82,6 @@ td{
 }
 
 th{
-  
   font-size:20px;
   font-size:20px;
   padding:12px;
@@ -138,19 +105,74 @@ h1{
   font-size:60px;
 }
 a{
-  color : rgb(243, 57, 82);
-  text-decoration:none;
+  transition: .8s ease;
+  border-radius: 10px;
 }
 
 a:hover{
-  color : rgb(225, 59, 81);
-  text-decoration:underline;
-}
-div.instagram{
-  padding: 2% 10% 5% 5%;
   background-color: white;
+  color:blue;
+}
+
+div.instagram{
+  margin-bottom: 150px;
+}
+
+h1{
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 72px;
+}
+
+p{
+  font-family: 'KoHo', sans-serif;
+  font-size:18px;
+}
+
+h4{
+  font-size: 24px;
+  line-height: 36px;
+  color: #1D3547;
+  margin-bottom: .5rem;
+  font-weight: 600;
+}
+
+#värderingar img{
+  max-width: 90px;
+}
+
+#värderingar .card{
+  border-width: 2px 3px 2px 0px;
+  border-style: solid;
+  border-color: blue;
+  border-radius:0px 12px 12px 0px;
 
 }
 
 
+@media only screen and (max-width: 800px) {
+  .container {
+    min-height: 1400px;
+  }
+  .col-6{
+    width: 100%;
+  }
+  .col-4{
+    width: 100%;
+  }
 
+  div.instagram .card{
+    min-width: 95px;
+    max-width: 150px;
+    max-height: 200px;
+  }
+  div.instagram .col{
+    min-width: 95px;
+    max-width: 50%;
+    max-height: 200px;
+  }
+
+  #instagram  {
+    min-height: 1000px;
+  }
+}
