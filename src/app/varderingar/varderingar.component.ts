@@ -9,6 +9,7 @@ import { Vardering} from './vardering'
 export class VarderingarComponent implements OnInit {
 
   varderingar: Vardering[] = [];
+  isCollapsed = false;
 
   constructor(private varderingarService:VarderingarService) { }
 

@@ -17,8 +17,8 @@ const routes: Routes = [
   { path: 'KingpinKids', component: KingpinKidsSidaComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'about', component: OmOssComponent },
-  {path:'membership', component: MedlemskapComponent},
-  {path: 'faq', component: FaqComponent},
+  { path:'membership', component: MedlemskapComponent },
+  { path: 'faq', component: FaqComponent },
 ];
 
 @NgModule({
