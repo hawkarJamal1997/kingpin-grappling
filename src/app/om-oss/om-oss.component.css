@@ -1,31 +1,35 @@
-
-.card{
-
-    max-width: 75%;
-    margin: auto;
-    margin-top:120px;
-    margin-bottom: 75px;
-    border-radius:25px;
-    border-color: white;
-
+.row{
+  margin: auto;
+  text-align: start;
 }
 
-
-.accordion {
-    max-width: 75%;
-    margin: auto;
-    overflow: hidden;
-    margin-bottom: 50px;
-    box-shadow: 0px 7px 30px rgba(64, 72, 228, 0.308);
-    border-color: white;
-
+.jumbotron{
+  padding: 0;
+  background: none;
+  width: 100%;
 }
 
-.accordion-item{
-    border-color: white;
-
+#omoss-picture{
+  margin: auto;
 }
 
-h1{
-    font-family: Comic Sans MS;
+img{
+  width: 100%;
+  max-height: 50rem;
+  min-width: 15rem;
+  min-height: 10rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+h2{
+  font-family: 'Inter-Black', Sans-Serif!important;
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: -0.042em;
+}
+
+p{
+  font-family: 'Inter-Regular', Sans-Serif;
+  font-size: 1.5rem;
+  line-height: 3rem;
 }

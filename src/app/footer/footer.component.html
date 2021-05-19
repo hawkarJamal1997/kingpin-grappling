@@ -1,46 +1,6 @@
 <div class="footer">
   <div class="row">
-    <div class="col-sm-3">
-      <h2><strong>Kingpin</strong></h2>
-      <a href="/membership">
-        <h3><span>Medlemskap</span></h3>
-      </a>
-      <a href="/schedule">
-        <h3><span>Schema</span></h3>
-      </a>
-      <a href="/kingpin-kids">
-        <h3><span>Kingpin kids</span></h3>
-      </a>
-      <a href="/contact">
-        <h3><span>Kontakt</span></h3>
-      </a>
-      <a href="/about">
-        <h3>Om Kingpin</h3>
-      </a>
-      <a href="/faq">
-        <h3>Vanliga frågor</h3>
-      </a>
-    </div>
-    <div class="col-sm-3">
-      <h3>Hitta hit</h3>
-      <p>Grännavägen 24, 561 34 Huskvarna <br> Ingång sker via Engelbrektsgatan. <br>
-        <br> <a href="/contact">
-          <h3>Kontakt</h3>
-        </a>
-        <p><i class="bi bi-telephone-fill" style="font-size: 1.3rem;"></i> +46703401360 <br>
-          <i class="bi bi-envelope-fill" style="font-size: 1.3rem;"></i>
-          <a href="mailto:info@kingpingrappling.se" style="font-size: 1rem; color: black;">
-            info@kingpingrappling.se
-          </a>
-        </p>
-        <a href="https://www.facebook.com/kingpingrappling.se/">
-          <i class="bi bi-facebook" style="font-size: 2rem;"></i>
-        </a>
-        <a href="https://www.instagram.com/kingpingrappling/">
-          <i class="bi bi-instagram" style="margin-left: 10px; font-size: 2rem; color:#fb3958"></i>
-        </a>
-      </div>
-    <div class="col-sm-6">
+    <div class="col-sm-12">
       <agm-map [zoom]="12" [latitude]="lat" [longitude]="lng">
         <agm-marker [latitude]="lat" [longitude]="lng">
           <agm-info-window [isOpen]="true">
@@ -48,6 +8,52 @@
           </agm-info-window>
         </agm-marker>
       </agm-map>
+    </div>
+  </div>
+  <hr>
+  <div class="row" id="info">
+    <div class="col-sm-4">
+      <h5><strong>Kingpin</strong></h5>
+      <a href="/membership">
+        <h6><span>Medlemskap</span></h6>
+      </a>
+      <a href="/schedule">
+        <h6><span>Schema</span></h6>
+      </a>
+      <a href="/kingpin-kids">
+        <h6><span>Kingpin kids</span></h6>
+      </a>
+      <a href="/contact">
+        <h6><span>Kontakt</span></h6>
+      </a>
+      <a href="/about">
+        <h6>Om Kingpin</h6>
+      </a>
+      <a href="/faq">
+        <h6>Vanliga frågor</h6>
+      </a>
+    </div>
+    <div class="col-sm-4" id="col-2">
+      <h5>Hitta hit</h5>
+      <p>Grännavägen 24, 561 34 Huskvarna <br> Ingång sker via Engelbrektsgatan. <br>
+        <br>
+    </div>
+    <div class="col-sm-4">
+      <a href="/contact">
+        <h5>Kontakt</h5>
+      </a>
+      <p><i class="bi bi-telephone-fill" style="font-size: 1.3rem;"></i> +46703401360 <br>
+        <i class="bi bi-at" style="font-size: 1.5rem;"></i>
+        <a href="mailto:info@kingpingrappling.se" style="font-size: 1rem; color: black;">
+          info@kingpingrappling.se
+        </a>
+      </p>
+      <a href="https://www.facebook.com/kingpingrappling.se/">
+        <i class="bi bi-facebook" style="font-size: 2rem;"></i>
+      </a>
+      <a href="https://www.instagram.com/kingpingrappling/">
+        <i class="bi bi-instagram" style="margin-left: 1rem; font-size: 2rem; color:#fb3958"></i>
+      </a>
     </div>
   </div>
 </div>
