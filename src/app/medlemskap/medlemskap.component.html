@@ -1,93 +1,193 @@
 
-
+<!--
 <div class="container py-5">
     <header class="py-5 text-center">
         <h1 class="display-4">Bli Medlem</h1>
     </header>
-        <div class="jumbotron">
-            <nav ngbNav #nav="ngbNav" class="nav-tabs">
-                <ng-container ngbNavItem>
-                    <a ngbNavLink>Hur mycket behöver jag betala?</a>
-                    <ng-template ngbNavContent>
+    <div class="jumbotron">
+        <nav ngbNav #nav="ngbNav" class="nav-tabs">
+            <ng-container ngbNavItem>
+                <a ngbNavLink>Hur mycket behöver jag betala?</a>
+                <ng-template ngbNavContent>        
+                    <div class="container">
                         <div class="row">
-                            <div class="col">
-
-                                <fieldset class="row mb-3">
-                                    <h4 class="col-form-label ">Vem Avser Betalningen?</h4>
-                                    <mat-radio-group [(ngModel)]="currentChoice">
-                                        <div class="form-check"*ngFor="let price of priceList">
-                                            <mat-radio-button (change)="choiceChanged(price)"  [value]="price">
-                                                <span id="content">{{price.name}}</span>
-                                            </mat-radio-button>
+                            <div class="col-6 my-auto">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <fieldset class="row mb-3">
+                                                <h4 class="col-form-label ">Vem Avser Betalningen?</h4>
+                                                <mat-radio-group [(ngModel)]="currentChoice">
+                                                    <div class="form-check"*ngFor="let price of priceList">
+                                                        <mat-radio-button (change)="choiceChanged(price)"  [value]="price">
+                                                            <span id="content">{{price.name}}</span>
+                                                        </mat-radio-button>
+                                                    </div>
+                                                </mat-radio-group>
+                                            </fieldset>
+                                            <form [formGroup]="form" >
+                                                <div class="row mb-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" formControlName="student"  (ngModelChange)="valueChanged()"  type="checkbox" id="isStudent" >
+                                                        <label class="form-check-label" for="gridCheck1">
+                                                            Är du student
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" formControlName="membership" (ngModelChange)="valueChanged()" type="checkbox" id="membership" >
+                                                        <label class="form-check-label" for="gridCheck1">
+                                                            Medlemsavgift (100:- per år som täcker försäkringar)
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <h2>Totalt: {{total | currency : 'sek' }}</h2>
+                                            </form>
                                         </div>
-                                    </mat-radio-group>
-
-                                </fieldset>
-                                <form [formGroup]="form" >
-                                    <div class="row mb-3">
-                                        <div class="form-check">
-                                            <input class="form-check-input" formControlName="student"  (ngModelChange)="valueChanged()"  type="checkbox" id="isStudent" >
-                                            <label class="form-check-label" for="gridCheck1">
-                                                Är du student
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" formControlName="membership" (ngModelChange)="valueChanged()" type="checkbox" id="membership" >
-                                            <label class="form-check-label" for="gridCheck1">
-                                                Medlemsavgift (100:- per år som täcker försäkringar)
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <h2>Totalt: {{total | currency : 'sek' }}</h2>
-                                </form>
-                            </div>
-                            <div class="col">
-                                <div class="card text-dark bg-info " >
-                                    <div class="card-header"><h1>Bra Att Veta</h1></div>
-                                    <div class="card-body">
-                                        <ul class="list-group list-group-flush ">
-                                            <li class="list-group-item">
-                                                <h5 >I priset ingår fri tillgång till samtliga pass på Kingpin.</h5>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <h5>Medlemsavgift 100:- per år som täcker försäkringar</h5>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <h5>*Familj innebär vuxen tränande plus ett eller flera barn samt personer på samma adress</h5>
-                                            </li>
-                                        </ul>
-
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="col-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Det ingår mer...</h4>
+                                        <p class="card-text">I priset ingår fri tillgång till samtliga pass på Kingpin.</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Medlemsavgift</h4>
+                                        <p class="card-text">Medlemsavgift 100:- per år som täcker försäkringar</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Vad innebär familj</h4>
+                                        <p class="card-text">*Familj innebär vuxen tränande plus ett eller flera barn samt personer på samma adress</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </ng-template>
-                </ng-container>
-                <ng-container ngbNavItem>
-                    <a ngbNavLink>Betalnings Metoder</a>
-                    <ng-template ngbNavContent>
-                        <ngb-accordion>
-                            <ngb-panel [disabled]="disabled" [cardClass]="disabled ? 'disabled' : ''"  *ngFor = "let method of paymentMethods">
-                                <ng-template ngbPanelHeader>
+                    </div>
+                </ng-template>
+            </ng-container>
+            <ng-container ngbNavItem>
+                <a ngbNavLink>Betalnings Metoder</a>
+                <ng-template ngbNavContent>
+                    <ngb-accordion>
+                        <ngb-panel [disabled]="disabled" [cardClass]="disabled ? 'disabled' : ''"  *ngFor = "let method of paymentMethods">
+                            <ng-template ngbPanelHeader>
                                 <div class="d-flex align-items-center justify-content-between">
                                     <button ngbPanelToggle class="btn btn-link container-fluid text-left pl-0">
-                                       <img src={{method.imgPath}}>
+                                        <img src={{method.imgPath}}>
                                     </button>
                                     <p *ngIf="disabled" class="text-muted m-0 small">[I'm&nbsp;disabled]</p>
                                 </div>
-                                </ng-template>
-                                <ng-template ngbPanelContent>
-                                    <div class="accordion-body">
-                                        <h5><strong>{{method.method}} Nummer:</strong> {{method.number}} </h5>
-                                        <h6>{{method.content}}</h6>
-                                    </div>
-                                </ng-template>
-                            </ngb-panel>
-                        </ngb-accordion>
-                    </ng-template>
-                </ng-container>
-            </nav>
-            <div [ngbNavOutlet]="nav" class="mt-2"></div>
-        </div>
+                            </ng-template>
+                            <ng-template ngbPanelContent>
+                                <div class="accordion-body">
+                                    <h5><strong>{{method.method}} Nummer:</strong> {{method.number}} </h5>
+                                    <h6>{{method.content}}</h6>
+                                </div>
+                            </ng-template>
+                        </ngb-panel>
+                    </ngb-accordion>
+                </ng-template>
+            </ng-container>
+        </nav>
+        <div [ngbNavOutlet]="nav" class="mt-2"></div>
     </div>
+</div>
+
+
+-->
+
+<div class="container my-auto">
+    <header class="text-center">
+        <h1 class="display-4">Bli Medlem</h1>
+    </header>
+    <div class="container mx-auto ">
+        <h4 class="mx-auto my-auto">Hur mycket behöver jag betala?</h4>
+        <div class="row mx-auto my-auto">
+            <div class="col-6 my-auto">
+                <div class="row my-auto">
+                    <div class="col">
+                        <fieldset class="row mb-3">
+                            <h4 class="col-form-label ">Vem Avser Betalningen?</h4>
+                            <mat-radio-group [(ngModel)]="currentChoice">
+                                <div class="form-check"*ngFor="let price of priceList">
+                                    <mat-radio-button (change)="choiceChanged(price)"  [value]="price">
+                                        <span id="content">{{price.name}}</span>
+                                    </mat-radio-button>
+                                </div>
+                            </mat-radio-group>
+                        </fieldset>
+                        <form [formGroup]="form" >
+                            <div class="row mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" formControlName="student"  (ngModelChange)="valueChanged()"  type="checkbox" id="isStudent" >
+                                    <label class="form-check-label" for="gridCheck1">
+                                        Är du student
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" formControlName="membership" (ngModelChange)="valueChanged()" type="checkbox" id="membership" >
+                                    <label class="form-check-label" for="gridCheck1">
+                                        Medlemsavgift (100:- per år som täcker försäkringar)
+                                    </label>
+                                </div>
+                            </div>
+                            <h2>Totalt: {{total | currency : 'sek' }}</h2>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Det ingår mer...</h4>
+                        <p class="card-text">I priset ingår fri tillgång till samtliga pass på Kingpin.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Medlemsavgift</h4>
+                        <p class="card-text">Medlemsavgift 100:- per år som täcker försäkringar</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Vad innebär familj</h4>
+                        <p class="card-text">*Familj innebär vuxen tränande plus ett eller flera barn samt personer på samma adress</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <div class="container mx-auto ">
+        <h4>Betalnings Metoder</h4>
+        <ngb-accordion class="my-auto">
+            <ngb-panel [disabled]="disabled" [cardClass]="disabled ? 'disabled' : ''"  *ngFor = "let method of paymentMethods">
+                <ng-template ngbPanelHeader  let-opened="opened">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <button ngbPanelToggle class="btn btn-link container-fluid text-left pl-0">
+                            <img src={{method.imgPath}}>
+                        </button>
+                        <p *ngIf="disabled" class="text-muted m-0 small">[I'm&nbsp;disabled]</p>
+                    </div>
+                </ng-template>
+                <ng-template ngbPanelContent let-opened="opened">
+                    <div class="accordion-body">
+                        <h5><strong>{{method.method}} Nummer:</strong> {{method.number}} </h5>
+                        <h6>{{method.content}}</h6>
+                    </div>
+                </ng-template>
+            </ngb-panel>
+        </ngb-accordion>
+    </div>         
+</div>
+
+
+
+
+
+

@@ -1,6 +1,3 @@
-
-
-
 img{
     max-height: 30px;
 }
@@ -17,13 +14,53 @@ img{
 }
 
 .jumbotron {
+    min-height: 100%;
     margin-bottom: 2rem;
     border-radius: .5rem;
     background:white;
-    box-shadow: 0px 7px 30px rgba(63, 64, 80, 0.699);
+    box-shadow: 0px 7px 30px rgba(241, 241, 245, 0.699);
 }
 
 .mat-radio-button ~ .mat-radio-button {
     margin-left: 16px;
 }
 
+.col-4{
+  min-width: 250px;
+  max-width: 50%;
+}
+
+.col-4 .card {
+    border-radius:0px 12px 12px 0px;
+    border-width: 2px 2px 2px 0px;
+    border-style: solid;
+    border-color: blue;
+    margin-top:15px;
+    box-shadow: 0px 7px 30px rgba(216, 208, 216, 0.699);
+    max-height:500px;
+    display: block;
+    word-wrap: break-word;
+}
+
+h1{
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 72px;
+  }
+  
+p{
+    font-family: 'KoHo', sans-serif;
+    font-size:18px;
+}
+
+h4{
+    font-size: 24px;
+    line-height: 36px;
+    color: #1D3547;
+    margin-bottom: .5rem;
+    font-weight: 600;
+}
+
+.container{
+    min-height: 800px;
+}
